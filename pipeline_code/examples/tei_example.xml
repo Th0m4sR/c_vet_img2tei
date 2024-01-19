@@ -1,0 +1,68 @@
+<TEI version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
+ <!-- https://tei-c.org/release/doc/tei-p5-doc/en/html/HD.html -->
+ <!-- The TEI header contains some meta information about the document -->
+ <teiHeader>
+  <!-- The file description stores metadata about the document -->
+  <fileDesc>
+   <!-- The title statement contains the title and the author -->
+   <titleStmt>
+    <title>Document Title</title>
+    <author>
+     <persName>Author Name</persName>
+     <orgName>Organization Name</orgName>
+    </author>
+   </titleStmt>
+   <!-- The publication statement contains information about the publisher, year, available and may refer to a resource -->
+   <publicationStmt>
+    <publisher>Publisher</publisher>
+    <pubPlace>PublishPlace, i.e. town</pubPlace>
+    <date when="1999">1999</date>
+    <availability><p>Available under licence etc.</p></availability>
+   </publicationStmt>
+   <sourceDesc>
+    <p>Source of the regulation / document / ...</p>
+   </sourceDesc>
+  </fileDesc>
+ </teiHeader>
+ <!-- End of TEI header -->
+ <!-- The actual document starts here -->
+ <!-- The text-tag contains the text of the actual document. From here, everything will be in the text -->
+ <text xml:lang="de">
+  <!-- The front contains any prefatory matter (headers, abstracts, title page, prefaces, dedications, etc.) found at the start of a document, before the main body -->
+  <front>
+   <p>Text from front</p>
+  </front>
+  <!-- The body contains the actual main text-->
+  <body>
+   <fw type="head" place="top-centre">Poëms.</fw>
+   <fw type="pageNum" place="top-right">29</fw>
+   <fw type="sig" place="bot-centre">E3</fw>
+   <fw type="catch" place="bot-right">TEMPLE</fw>
+   <!-- Chapters may be indicated as div (also div1, div2, ... div7) with type="part/chapter/section" -->
+   <div type="section" n="1">
+    <!-- Document pages may be indicated with pb for "page beginning" to save on which page we are -->
+    <!-- n is the number, facs the corresponding image and ed can be an edition if it starts at different spots -->
+    <!-- e.g., in ed1, the page may start at page 123 but in ed2, it may start at 248 -->
+    <pb n="1" facs="page1.png" ed="ed1"/>
+    <!-- The head-tag can be a headline, e.g. the title of a section, heading of a list, ... -->
+    <head>Headline?</head>
+    <!-- The p contains actual text-->
+    <p>This is about the shortest TEI document imaginable.</p>
+    <p>
+     <seg>A paragraph can be further segmented.</seg>
+     <seg>But this should be the lowest level.</seg>
+    </p>
+   </div>
+  </body>
+  <!-- The back contains the rest such as appendix/epistle/advert etc. -->
+  <back>
+   <div type="appendix">
+    <head>Ausbildungsabschnitte</head>
+    <list>
+     <item n="1">Item 1</item>
+     <item n="2">Item 2</item>
+    </list>
+   </div>
+  </back>
+ </text>
+</TEI>
